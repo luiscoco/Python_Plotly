@@ -36,6 +36,10 @@ fig.update_layout(title='Simple Line Chart', xaxis_title='X Axis', yaxis_title='
 fig.show()
 ```
 
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/2e8e8773-0654-46e6-b601-c8765a20e1b4)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/3aaf8618-3998-4366-a936-24e2043006ea)
+
 ## 2. Bar Chart
 
 Here's how to create a simple bar chart:
