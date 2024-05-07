@@ -170,27 +170,76 @@ This example showcases how to create an animated scatter plot, which can be part
 import plotly.graph_objects as go
 import numpy as np
 
-# Generate data
-frames = []
-for t in np.linspace(0, 2*np.pi, 100):
-    x = np.sin(t)
-    y = np.cos(t)
-    frames.append(go.Frame(data=[go.Scatter(x=[x], y=[y], mode='markers')], name=str(t)))
+# Time steps
+t = np.linspace(0, 2 * np.pi, 100)
 
-# Create a figure
+# Coordinates based on time
+x = np.sin(t)
+y = np.cos(t)
+
+# Creating the initial scatter plot
 fig = go.Figure(
-    data=[go.Scatter(x=[0], y=[1], mode='markers')],
+    data=[go.Scatter(x=[x[0]], y=[y[0]], mode='markers')],
     layout=go.Layout(
-        xaxis=dict(range=[-1, 1], autorange=False),
-        yaxis=dict(range=[-1, 1], autorange=False),
+        xaxis=dict(range=[-1.5, 1.5], autorange=False),
+        yaxis=dict(range=[-1.5, 1.5], autorange=False),
         title="Animated Scatter Plot"
-    ),
-    frames=frames
+    )
 )
 
-# Show plot
+# Adding frames to the animation
+frames = [go.Frame(data=[go.Scatter(x=[x[k]], y=[y[k]])])
+          for k in range(len(t))]
+
+fig.frames = frames
+
+# Add a slider and play/pause button to control the animation
+fig.update_layout(
+    updatemenus=[
+        {
+            "buttons": [
+                {
+                    "args": [None, {"frame": {"duration": 50, "redraw": True}, "fromcurrent": True}],
+                    "label": "Play",
+                    "method": "animate"
+                },
+                {
+                    "args": [[None], {"frame": {"duration": 0, "redraw": True}, "mode": "immediate", "transition": {"duration": 0}}],
+                    "label": "Pause",
+                    "method": "animate"
+                }
+            ],
+            "direction": "left",
+            "pad": {"r": 10, "t": 87},
+            "showactive": False,
+            "type": "buttons",
+            "x": 0.1,
+            "xanchor": "right",
+            "y": 0,
+            "yanchor": "top"
+        }
+    ],
+    sliders=[{
+        "currentvalue": {
+            "prefix": "Time: ",
+            "visible": True,
+            "xanchor": "right"
+        },
+        "transition": {"duration": 300, "easing": "cubic-in-out"},
+        "pad": {"b": 10, "t": 50},
+        "len": 0.9,
+        "x": 0.1,
+        "y": 0,
+        "steps": [{"args": [[f.name], {"frame": {"duration": 300, "redraw": True}, "mode": "immediate", "transition": {"duration": 300}}],
+                  "label": str(k), "method": "animate"} for k, f in enumerate(fig.frames)]
+    }]
+)
+
+# Show the plot
 fig.show()
 ```
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/7585b8dd-774b-413e-98b2-c9f662d5ffa3)
 
 ## 7. Setting Up VSCode for Plotly
 
