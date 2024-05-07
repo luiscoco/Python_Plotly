@@ -126,6 +126,10 @@ fig.update_layout(title='3D Surface Plot', autosize=False,
 fig.show()
 ```
 
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/2046f932-5ba5-4723-893d-3b34d4ffabb9)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/51cf5315-68db-4bff-8d7e-a14f6f455d2e)
+
 ## 5. Contour Plot
 
 Contour plots are great for displaying the potential distribution or level curves of a function
@@ -151,6 +155,10 @@ fig.update_layout(title='Contour Plot', width=800, height=800)
 # Show plot
 fig.show()
 ```
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/d088b531-9319-4a46-8265-3b9adde6f4a3)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/9538cbf9-8bc9-413f-bbb3-2b95379dde86)
 
 ## 6. Animated Scatter Plot
 
