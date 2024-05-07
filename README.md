@@ -2,8 +2,6 @@
 
 https://plotly.com/
 
-https://www.youtube.com/watch?v=j0wvKWb337A&list=PLE50-dh6JzC4onX-qkv9H3HtPbBVA8M94
-
 **Plotly** is a popular library for creating interactive charts and visualizations in Python
 
 It's well-suited for use in **VSCode**, which is a powerful editor that supports Python development through **extensions** like **Python** and **Jupyter**
@@ -167,6 +165,16 @@ fig.show()
 ## 6. Animated Scatter Plot
 
 This example showcases how to create an animated scatter plot, which can be particularly useful for visualizing data changes over time
+
+**Initial Data**: The initial scatter plot is set up with the first coordinates of the sine and cosine values
+
+**Frames**: Frames are generated in a list comprehension where each frame contains a snapshot of the position at each time step
+
+**Animation Controls**: The layout is updated to include animation controls like play and pause buttons, and a slider for navigating through the time steps
+
+**Duration Settings**: The frame duration and transition times are configured to make the animation smooth
+
+This setup should provide a clear **animation of a point moving in a circular path**, illustrating both sine and cosine functions
 
 ```python
 import plotly.graph_objects as go
