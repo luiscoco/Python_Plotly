@@ -2,6 +2,10 @@
 
 https://plotly.com/
 
+https://plotly.com/python/
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/240e8141-21da-4287-87ae-a434110edb07)
+
 **Plotly** is a popular library for creating interactive charts and visualizations in Python
 
 It's well-suited for use in **VSCode**, which is a powerful editor that supports Python development through **extensions** like **Python** and **Jupyter**
