@@ -263,7 +263,11 @@ This allows you to write and execute code in cells, view plots inline, and more 
 
 **Install the Jupyter extension**: Search for the Jupyter extension in the VSCode Extensions view (**Ctrl+Shift+X**) and install it
 
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/d246d4ee-ca0f-4581-9df7-5d9066c939c1)
+
 **Create a new notebook**: Open the command palette (**Ctrl+Shift+P**), type and select "**Jupyter: Create New Blank Notebook**"
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/91d9b2d8-8bf0-48c8-b765-76953c4dea80)
 
 **Enter and execute Plotly code**: You can enter the code snippets provided above in different cells and run them to see the visualizations immediately
 
