@@ -96,7 +96,93 @@ fig.show()
 
 ![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/2a1abfd6-2889-4e6e-a775-05b4a267d10e)
 
-## 4. Setting Up VSCode for Plotly
+Let's delve into some **more advanced and complex Plotly examples** that showcase its capabilities for creating interactive and sophisticated visualizations
+
+These examples will demonstrate a 3D surface plot, a contour plot, and an animated scatter plot
+
+## 4. 3D Surface Plot
+
+This example will create a 3D surface plot, which can be useful for visualizing complex mathematical functions or geographic data
+
+```python
+import plotly.graph_objects as go
+import numpy as np
+
+# Generate data
+x = np.linspace(-5, 5, 50)
+y = np.linspace(-5, 5, 50)
+x, y = np.meshgrid(x, y)
+z = np.sin(np.sqrt(x**2 + y**2))
+
+# Create a figure
+fig = go.Figure(data=[go.Surface(z=z, x=x, y=y)])
+
+# Update the layout
+fig.update_layout(title='3D Surface Plot', autosize=False,
+                  width=800, height=800,
+                  margin=dict(l=65, r=50, b=65, t=90))
+
+# Show plot
+fig.show()
+```
+
+## 5. Contour Plot
+
+Contour plots are great for displaying the potential distribution or level curves of a function
+
+Here's how to create a contour plot:
+
+```python
+import plotly.graph_objects as go
+import numpy as np
+
+# Generate data
+x = np.linspace(-2, 2, 200)
+y = np.linspace(-2, 2, 200)
+x, y = np.meshgrid(x, y)
+z = x * np.exp(-x**2 - y**2)
+
+# Create a figure
+fig = go.Figure(data=[go.Contour(z=z, x=x[0], y=y[:, 0])])
+
+# Update the layout
+fig.update_layout(title='Contour Plot', width=800, height=800)
+
+# Show plot
+fig.show()
+```
+
+## 6. Animated Scatter Plot
+
+This example showcases how to create an animated scatter plot, which can be particularly useful for visualizing data changes over time
+
+```python
+import plotly.graph_objects as go
+import numpy as np
+
+# Generate data
+frames = []
+for t in np.linspace(0, 2*np.pi, 100):
+    x = np.sin(t)
+    y = np.cos(t)
+    frames.append(go.Frame(data=[go.Scatter(x=[x], y=[y], mode='markers')], name=str(t)))
+
+# Create a figure
+fig = go.Figure(
+    data=[go.Scatter(x=[0], y=[1], mode='markers')],
+    layout=go.Layout(
+        xaxis=dict(range=[-1, 1], autorange=False),
+        yaxis=dict(range=[-1, 1], autorange=False),
+        title="Animated Scatter Plot"
+    ),
+    frames=frames
+)
+
+# Show plot
+fig.show()
+```
+
+## 7. Setting Up VSCode for Plotly
 
 To make the most out of using Plotly in VSCode, you might want to use the Jupyter Notebook support within VSCode
 
