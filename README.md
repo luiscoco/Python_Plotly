@@ -64,6 +64,10 @@ fig.update_layout(title='Simple Bar Chart', xaxis_title='Fruits', yaxis_title='Q
 fig.show()
 ```
 
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/a675076e-f778-4f04-a7c3-de3b9a1e620f)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/b3fe6e7e-eb3c-4da8-ba3a-f1cbec4c13cf)
+
 ## 3. Pie Chart
 
 This example demonstrates how to create a pie chart:
@@ -87,6 +91,10 @@ fig.update_layout(title='Simple Pie Chart')
 # Show plot
 fig.show()
 ```
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/edb79fac-d15c-4b81-8b37-092e28dda00d)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/2a1abfd6-2889-4e6e-a775-05b4a267d10e)
 
 ## 4. Setting Up VSCode for Plotly
 
