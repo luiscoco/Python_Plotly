@@ -251,7 +251,7 @@ fig.show()
 
 ![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/7585b8dd-774b-413e-98b2-c9f662d5ffa3)
 
-## 7. Setting Up VSCode for Plotly
+## 7. Setting Up Jupyter in VSCode for Plotly
 
 To make the most out of using **Plotly in VSCode**, you might want to use the **Jupyter Notebook** support within **VSCode**
 
@@ -262,3 +262,54 @@ This allows you to write and execute code in cells, view plots inline, and more 
 **Create a new notebook**: Open the command palette (**Ctrl+Shift+P**), type and select "**Jupyter: Create New Blank Notebook**"
 
 **Enter and execute Plotly code**: You can enter the code snippets provided above in different cells and run them to see the visualizations immediately
+
+Install the following libraries:
+
+```
+pip install numpy
+```
+
+```
+pip install plotly pandas
+```
+
+```
+pip install pandas
+```
+
+```
+pip install statsmodels
+```
+
+```
+pip install --upgrade nbformat
+```
+
+### 7.1. Sample 
+
+```python
+import plotly.express as px
+import pandas as pd
+import numpy as np
+
+# Sample data creation
+np.random.seed(42)  # for reproducible results
+data = {
+    'X': range(1, 101),
+    'Y': [x * np.random.rand() * 5 for x in range(1, 101)]
+}
+df = pd.DataFrame(data)
+
+# Scatter plot
+fig = px.scatter(df, x='X', y='Y', trendline='ols',
+                 title='Scatter Plot with Line of Best Fit')
+
+# Show figure
+fig.show()
+```
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/03352aa1-aaa7-47f7-921c-ca6544e8c6cb)
+
+![image](https://github.com/luiscoco/Python_Plotly/assets/32194879/f0da7057-bcf7-4a96-bfc7-9636e0933f67)
+
+
