@@ -253,12 +253,12 @@ fig.show()
 
 ## 7. Setting Up VSCode for Plotly
 
-To make the most out of using Plotly in VSCode, you might want to use the Jupyter Notebook support within VSCode
+To make the most out of using **Plotly in VSCode**, you might want to use the **Jupyter Notebook** support within **VSCode**
 
 This allows you to write and execute code in cells, view plots inline, and more interactively develop your visualizations
 
-Install the Jupyter extension: Search for the Jupyter extension in the VSCode Extensions view (Ctrl+Shift+X) and install it
+**Install the Jupyter extension**: Search for the Jupyter extension in the VSCode Extensions view (**Ctrl+Shift+X**) and install it
 
-Create a new notebook: Open the command palette (Ctrl+Shift+P), type and select "Jupyter: Create New Blank Notebook"
+**Create a new notebook**: Open the command palette (**Ctrl+Shift+P**), type and select "**Jupyter: Create New Blank Notebook**"
 
-Enter and execute Plotly code: You can enter the code snippets provided above in different cells and run them to see the visualizations immediately
+**Enter and execute Plotly code**: You can enter the code snippets provided above in different cells and run them to see the visualizations immediately
